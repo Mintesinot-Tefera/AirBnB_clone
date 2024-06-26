@@ -7,16 +7,11 @@ from models import storage
 
 
 class BaseModel:
-    """
-    Base class for all other classes.
 
-    This class provides methods for initializing instance attributes,
-    saving updated_at attribute, and converting to a dictionary.
-    """
+    """Class from which all other classes will inherit"""
 
     def __init__(self, *args, **kwargs):
-        """
-        Initializes instance attributes.
+        """Initializes instance attributes
 
         Args:
             - *args: list of arguments
@@ -40,37 +35,19 @@ class BaseModel:
             storage.new(self)
 
     def __str__(self):
-        """
-        Returns official string representation.
+        """Returns official string representation"""
 
-        Returns:
-            str: official string representation of the object.
-        """
-
-        return "[{}] ({}) {}".format(type(self).__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".\
+            format(type(self).__name__, self.id, self.__dict__)
 
     def save(self):
-        """
-        Updates the public instance attribute updated_at.
-
-        This method updates the updated_at attribute of the object
-        with the current datetime and saves the changes to the storage.
-        """
+        """updates the public instance attribute updated_at"""
 
         self.updated_at = datetime.now()
         storage.save()
 
     def to_dict(self):
-        """
-        Returns a dictionary containing all keys/values of __dict__.
-
-        This method creates a dictionary by copying the __dict__ of the object.
-        It adds the __class__ key with the name of the class and converts the
-        created_at and updated_at attributes to ISO format.
-
-        Returns:
-            dict: dictionary containing all keys/values of __dict__
-        """
+        """returns a dictionary containing all keys/values of __dict__"""
 
         my_dict = self.__dict__.copy()
         my_dict["__class__"] = type(self).__name__

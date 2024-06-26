@@ -5,10 +5,6 @@ from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """
-    Class for managing amenity objects.
-    
-    Attributes:
-        name (str): The name of the amenity.
-    """
+    """Class for managing amenity objects"""
+
     name = ""
