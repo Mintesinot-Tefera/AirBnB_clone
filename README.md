@@ -19,9 +19,10 @@ This command assumes you have Python 3 installed on your system and have set the
 Once the command interpreter is running, you can interact with it using commands in the following format:
 (command) (arguments)
 1. Show all Airbnb listings:
-all Place
+   all Place
 2. Update an Airbnb listing:
-update Place <place_id> price_by_night=200
+   update Place <place_id> price_by_night=200
 3. Quit the command interpreter:
-quit
+   quit
+
 For more detailed command options and usage instructions, refer to the project's documentation or use the help command within the console.
