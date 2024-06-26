@@ -1,14 +1,14 @@
-#AirBnB clone
+# AirBnB clone
 
-##Description
+## Description
 
 This project is a command-line interface (CLI) implementation of a simplified Airbnb management system. It allows users to interact with and manage Airbnb-like listings and user data using commands entered into a console.
 
-##Command Interpreter
+## Command Interpreter
 
 The command interpreter (CLI) is designed to accept commands from the user and execute corresponding actions on Airbnb listings and user data. It provides a text-based interface for interacting with the application's functionalities.
 
-##How to Start the Command Interpreter
+## How to Start the Command Interpreter
 
 Run the command interpreter
 ./console.py
